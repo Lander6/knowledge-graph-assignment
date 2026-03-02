@@ -1,0 +1,47 @@
+@base <https://github.com/Lander6/knowledge-graph-assignment.git> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<#Person> a rdfs:Class;
+rdfs:label "Person" @en;
+rdfs:comment "Human being" @en .
+
+<#Student> a rdfs:Class;
+rdfs:label "Student" @en;
+rdfs:comment "A person enrolled in an educational institution with the aim of learning, studying or training." @en;
+rdfs:subClassOf <#Person> .
+
+<#PhDStudent> a rdfs:Class;
+rdfs:label "PhD student" @en;
+rdfs:comment "A person enrolled in a Doctor of Philosophy (PhD) program who is undertaking advanced study and original research." @en;
+rdfs:subClassOf <#Student> .
+
+<#BasketballCoach> a rdfs:Class;
+rdfs:label "Basketball coach"@en;
+rdfs:comment "A basketball coach is a person who trains and leads basketball players or teams, and is responsible for strategy, player development, and game preparation." @en;
+rdfs:subClassOf <#Person> .
+
+<#age> a rdf:Property;
+rdfs:label "age"@en, "leeftijd"@nl;
+rdfs:comment "The age of the person." @en;
+rdfs:domain <#Person>;
+rdfs:range rdfs:Literal .
+
+<#studentNumber> a rdf:Property;
+rdfs:label "Student number" @en; 
+rdfs:comment "Unique number used to identify a student within the university." @en;
+rdfs:domain <#Student>;
+rdfs:range rdfs:Literal .
+
+<#from> a rdf:Property; 
+rdfs:label "from" @en;
+rdfs:comment "Where a person or other object originates from." @en;
+rdfs:domain rdfs:Resource;
+rdfs:range rdfs:Literal .
+
+<#knows> a rdf:Property;
+rdfs:label "knows" @en;
+rdfs:comment "Relates a person to another person they know." @en; 
+rdfs:domain <#Person>;
+rdfs:range <#Person> .
+
