@@ -45,3 +45,9 @@ rdfs:comment "Relates a person to another person they know." @en;
 rdfs:domain <#Person>;
 rdfs:range <#Person> .
 
+<#name> a rdf:Property;
+rdfs:label "name" @en;
+rdfs:comment "What someone is called" @en;
+rdfs:domain <#Person>;
+rdfs:range rdfs:Literal .
+
