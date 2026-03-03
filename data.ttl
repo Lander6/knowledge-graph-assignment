@@ -1,6 +1,6 @@
-@prefix voc: <https://lander6.github.io/knowledge-graph-assignment/vocab#> .
+@prefix voc: <https://lander6.github.io/knowledge-graph-assignment/vocab.ttl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix data: <https://lander6.github.io/knowledge-graph-assignment/data#> .
+@prefix data: <https://lander6.github.io/knowledge-graph-assignment/data.ttl#> .
 
 data:Lander voc:name "Lander Maus"^^xsd:string;
 a voc:PhDStudent, voc:BasketballCoach;
