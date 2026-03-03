@@ -21,6 +21,10 @@ rdfs:label "Basketball coach"@en;
 rdfs:comment "A basketball coach is a person who trains and leads basketball players or teams, and is responsible for strategy, player development, and game preparation." @en;
 rdfs:subClassOf <#Person> .
 
+<#City> a rdfs:Class;
+rdfs:label "City"@en;
+rdfs:comment "A city is a larger inhabited urban place." .
+
 <#age> a rdf:Property;
 rdfs:label "age"@en, "leeftijd"@nl;
 rdfs:comment "The age of the person." @en;
@@ -37,7 +41,7 @@ rdfs:range rdfs:Literal .
 rdfs:label "from" @en;
 rdfs:comment "Where a person or other object originates from." @en;
 rdfs:domain rdfs:Resource;
-rdfs:range rdfs:Literal .
+rdfs:range <#City> .
 
 <#knows> a rdf:Property;
 rdfs:label "knows" @en;
