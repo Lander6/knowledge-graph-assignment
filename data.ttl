@@ -8,5 +8,5 @@ voc:studentNumber "61812645"^^xsd:string;
 voc:age "25"^^xsd:integer;
 voc:from data:Gent .
 
-data:Lander voc:knows data:Seppe;
+data:Lander voc:knows <https://janaverl.github.io/knowledge_graphs_lab2/0001.ttl#Jana>;
 voc:knows data:Karel . 
