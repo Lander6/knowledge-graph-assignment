@@ -23,7 +23,7 @@ rdfs:subClassOf <#Person> .
 
 <#City> a rdfs:Class;
 rdfs:label "City"@en;
-rdfs:comment "A city is a larger inhabited urban place." .
+rdfs:comment "A city is a larger inhabited urban place." @en.
 
 <#age> a rdf:Property;
 rdfs:label "age"@en, "leeftijd"@nl;
@@ -51,7 +51,7 @@ rdfs:range <#Person> .
 
 <#name> a rdf:Property;
 rdfs:label "name" @en;
-rdfs:comment "What someone is called" @en;
-rdfs:domain <#Person>;
+rdfs:comment "What someone or something is called" @en;
+rdfs:domain rdfs:Resource;
 rdfs:range rdfs:Literal .
 

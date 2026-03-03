@@ -6,7 +6,7 @@ data:Lander voc:name "Lander Maus"^^xsd:string;
 a voc:PhDStudent, voc:BasketballCoach;
 voc:studentNumber "61812645"^^xsd:string;
 voc:age "25"^^xsd:integer;
-voc:from data:Gent .
+voc:from data:Ghent .
 
 data:Lander voc:knows <https://janaverl.github.io/knowledge_graphs_lab2/0001.ttl#Jana>;
 voc:knows data:Karel . 
