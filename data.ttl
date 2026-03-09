@@ -11,4 +11,4 @@ voc:from data:Ghent .
 data:Ghent a voc:City;
 voc:name "Ghent"^^xsd:string .
 
-data:Lander voc:knows <https://janaverl.github.io/knowledge_graphs_lab2/0001.ttl#Jana>, <https://cornelka.github.io/sol_kc/data#karelcornelis> . 
+data:Lander voc:knows <https://janaverl.github.io/knowledge_graphs_lab2/0001.ttl#Jana>, <https://cornelka.github.io/sol_kc/data#karelcornelis>,  <https://cornelka.github.io/sol_kc/data#karelcornelis> . 
