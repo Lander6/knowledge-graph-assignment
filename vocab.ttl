@@ -1,6 +1,7 @@
 @base <https://lander6.github.io/knowledge-graph-assignment/vocab.ttl> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://mxlns.com/foaf/0.1/> .
 
 <#Person> a rdfs:Class;
 rdfs:label "Person" @en;
@@ -47,7 +48,8 @@ rdfs:range <#City> .
 rdfs:label "knows" @en;
 rdfs:comment "Relates a person to another person they know." @en; 
 rdfs:domain <#Person>;
-rdfs:range <#Person> .
+rdfs:range <#Person>;
+owl:equivalentProperty foaf:knows .
 
 <#name> a rdf:Property;
 rdfs:label "name" @en;
