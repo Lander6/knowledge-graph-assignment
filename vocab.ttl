@@ -2,9 +2,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 <#Person> a rdfs:Class;
+rdfs:subClassOf foaf:Person;
 rdfs:label "Person" @en;
 rdfs:comment "Human being" @en .
 
@@ -24,8 +24,17 @@ rdfs:comment "A basketball coach is a person who trains and leads basketball pla
 rdfs:subClassOf <#Person> .
 
 <#City> a rdfs:Class;
-rdfs:label "City"@en;
+rdfs:label "City" @en;
 rdfs:comment "A city is a larger inhabited urban place." @en.
+
+<#Place> a rdfs:Class;
+rdfs:label "Place" @en;
+rdfs:comment "A geopgraphical or physical location." @en .
+
+<#Photograph> a rdfs:Class;
+rdfs:label "Photograph" @en;
+rdfs:comment "A visual image taken with a camera or similar device" @en;
+rdfs:subClassOf foaf:Image.
 
 <#age> a rdf:Property;
 rdfs:label "age"@en, "leeftijd"@nl;
@@ -50,11 +59,48 @@ rdfs:label "knows" @en;
 rdfs:comment "Relates a person to another person they know." @en; 
 rdfs:domain <#Person>;
 rdfs:range <#Person>;
-owl:equivalentProperty foaf:knows .
+rdfs:subPropertyOf foaf:knows .
 
 <#name> a rdf:Property;
 rdfs:label "name" @en;
-rdfs:comment "What someone or something is called" @en;
+rdfs:comment "What someone or something is called." @en;
 rdfs:domain rdfs:Resource;
-rdfs:range rdfs:Literal .
+rdfs:range rdfs:Literal;
+rdfs:subPropertyOf foaf:name .
+
+<#photographTitle> a rdf:Property;
+rdfs:label "title" @en;
+rdfs:comment "The title or name of a photograph." @en;
+rdfs:domain <#Photograph>;
+rdfs:range rdfs:Literal;
+rdfs:subPropertyOf foaf:name.
+
+<#photographer> a rdf:Property;
+rdfs:label "photographer" @en;
+rdfs:comment "The person that took the picture." @en;
+rdfs:domain <#Photograph>;
+rdfs:range <#Person>;
+rdfs:subPropertyOf foaf:maker.
+
+<#depicts> a rdf:Property;
+rdfs:subPropertyOf foaf:depicts;
+rdfs:label "depicts" @en;
+rdfs:comment "People, objects or places that are shown in the photograph" @en;
+rdfs:domain <#Photograph>;
+rdfs:range rdfs:Resource.
+
+<#takenAt> a rdf:Property;
+rdfs:label "taken in" @en;
+rdfs:comment "Location where the photograph was taken" @en;
+rdfs:domain <#Photograph>;
+rdfs:range rdfs:Resource.
+
+<#photographDescription> a rdf:Property;
+rdfs:label "description" @en;
+rdfs:comment "describes what is depicted on a photograph" @en;
+rdfs:domain <#Photograph>;
+rdfs:range rdfs:Literal.
+
+
+
 

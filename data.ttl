@@ -8,7 +8,43 @@ voc:studentNumber "61812645"^^xsd:string;
 voc:age "25"^^xsd:integer;
 voc:from data:Ghent .
 
+data:Bas a voc:Person;
+voc:name "Bas Bogaerts"^^xsd:string . 
+
+data:Fer a voc:Person;
+voc:name "Fer Bosuyt"^^xsd:string .
+
 data:Ghent a voc:City;
 voc:name "Ghent"^^xsd:string .
 
-data:Lander voc:knows <https://janaverl.github.io/knowledge_graphs_lab2/0001.ttl#me>, <https://cornelka.github.io/sol_kc/data#karelcornelis>, <https://cornelka.github.io/sol_kc/data#karelcornelis> . 
+data:Brugge a voc:City;
+voc:name "Brugge"^^xsd:string .
+
+data:SporthalHenleykaai a voc:Place;
+voc:name "Sporthal Henleykaai"^^xsd:string .
+
+data:Lander voc:knows <https://janaverl.github.io/knowledge_graphs_lab2/0001.ttl#Jana>, <https://cornelka.github.io/sol_kc/data#karelcornelis>, <https://federickds.github.io/knowledge_graphs/data.ttl#me> . 
+
+<https://lander6.github.io/knowledge-graph-assignment/picture_1.jpg> a voc:Photograph;
+voc:photographTitle "ProfilePicture"^^xsd:string;
+voc:photographer [
+    a voc:Person;
+    voc:name "Nathalie"^^xsd:string
+];
+voc:depicts data:Lander;
+voc:takenAt data:Brugge;
+voc:photographDescription "profile picture of Lander"^^xsd:string .
+
+<https://visit.gent.be/nl/zien-doen/historisch-centrum#picture> a voc:Photograph;
+voc:photographTitle "Historical centre Ghent"^^xsd:string;
+voc:depicts data:Ghent;
+voc:photographer data:Bas;
+voc:takenAt data:Ghent;
+voc:photographDescription "picture of the old part of Ghent" ^^xsd:string .
+
+<https://lander6.github.io/knowledge-graph-assignment/picture_2.jpg> a voc:Photograph;
+voc:photographTitle "Hudle"^^xsd:string;
+voc:depicts data:Lander, data:Fer;
+voc:photographer data:Bas;
+voc:takenAt data:SporthalHenleykaai;
+voc:photographDescription "picture of a huddle during basketball game"^^xsd:string.
